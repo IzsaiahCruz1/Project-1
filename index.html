@@ -8,104 +8,248 @@
 </head>
 <body>
 <a-scene>
- 
-  <a-plane
-    position="0 0 0"
-    rotation="-90 0 0"
-    width="28"
-    height="15"
-    color="#DAA06D"
-  ></a-plane>
+<a-assets>
 
-  
-  <a-box
-    position="0 0.01 -7.5"
-    width="28"
-    height="0.1"
-    depth="0.1"
-    color="white"
-  ></a-box>
-  <a-box
-    position="0 0.01 7.5"
-    width="28"
-    height="0.1"
-    depth="0.1"
-    color="white"
-  ></a-box>
+<img
+id="court-wood-base"
+src="assets/Wood_Floor_015_basecolor.png"
+>
+<img
+id="court-wood-ao"
+src="assets/Wood_Floor_015_ambientOcclusion.jpg"
+>
+<img
+id="court-wood-normal"
+src="assets/Wood_Floor_015_normal.png"
+>
+<img
+id="ground-base"
+src="assets/Concrete_017_basecolor.jpg"
+>
+<img
+id="ground-ao"
+src="assets/Concrete_017_ambientOcclusion.jpg"
+>
+<img
+id="ground-normal"
+src="assets/Concrete_017_normal.jpg"
+>
 
- 
-  <a-box
-    position="-14 0.01 0"
-    width="0.1"
-    height="0.1"
-    depth="15"
-    color="#FFFFFF"
-  ></a-box>
-  <a-box
-    position="14 0.01 0"
-    width="0.1"
-    height="0.1"
-    depth="15"
-    color="#FFFFFF"
-  ></a-box>
+<img
+id="metal-base"
+src="assets/Metal_Pattern_011_basecolor.png"
+>
+<img
+id="metal-ao"
+src="assets/Metal_Pattern_011_ambientOcclusion.jpg"
+>
+<img
+id="metal-normal"
+src="assets/Metal_Pattern_011_normal.png"
+>
+<a-asset-item 
+id="basketball" 
+src="assets\basketball.glb"
+>
+</a-asset-item>
+<a-asset-item 
+id="bench" 
+src="assets\bench.glb"
+>
+</a-asset-item>
+<a-asset-item 
+id="cone" 
+src="assets\cone.glb"
+>
+</a-asset-item>
+<a-asset-item 
+id="lightpost" 
+src="assets\lightpost.glb"
+>
+</a-asset-item>
+<a-asset-item 
+id="stadiumseats" 
+src="assets\stadiumseats.glb"
+>
+</a-asset-item>
+</a-assets>
 
- 
-  <a-circle
-    position="0 0.01 0"
-    rotation="-90 0 0"
-    radius="1.8"
-    color="white"
-  ></a-circle>
+<a-plane
+material="src: #court-wood-base;
+repeat: 20 10;
+ambientOcclusionMap: #court-wood-ao;
+ambientOcclusionTextureRepeat: 20 10;
+normalMap: #court-wood-normal;
+normalTextureRepeat: 20 10"
+position="0 0 0"
+rotation="-90 0 0"
+width="28"
+height="15"
+color="#DAA06D" 
+>
+</a-plane>
 
- 
-  <a-box
-    position="-11 0.01 0"
-    width="6"
-    height="0.1"
-    depth="6"
-    color="white"
-  ></a-box>
-  <a-cylinder
-    position="-12.5 1.5 0"
-    radius="0.1"
-    height="3"
-    color="gray"
-  ></a-cylinder>
-  <a-box
-    position="-12.5 3 0"
-    width="0.5"
-    height="1"
-    depth="1.8"
-    color="light brown"
-  ></a-box>
 
-  
-  <a-box
-    position="11 0.01 0"
-    width="6"
-    height="0.1"
-    depth="6"
-    color="light brown"
-  ></a-box>
-  <a-cylinder
-    position="12.5 1.5 0"
-    radius="0.1"
-    height="3"
-    color="gray"
-  ></a-cylinder>
-  <a-box
-    position="12.5 3 0"
-    width="0.5"
-    height="1"
-    depth="1.8"
-    color="light brown"
-  </a-box>
+<a-box
+position="0 0.01 -7.5"
+width="28"
+height="0.1"
+depth="0.1"
+color="white"
+>
+</a-box>
+<a-box
+position="0 0.01 7.5"
+width="28"
+height="0.1"
+depth="0.1"
+color="white"
+> 
+</a-box>
 
-  
 
- 
+<a-box
+position="-14 0.01 0"
+width="0.1"
+height="0.1"
+depth="15"
+color="#FFFFFF"
+>
+</a-box>
+<a-box
+position="14 0.01 0"
+width="0.1"
+height="0.1"
+depth="15"
+color="#FFFFFF"
+>
+</a-box>
 
- 
+
+<a-circle
+position="0 0.01 0"
+rotation="-90 0 0"
+radius="1.8"
+color="white"
+>
+</a-circle>
+
+
+<a-box
+position="-11 0.01 0"
+width="6"
+height="0.1"
+depth="6"
+color="white"
+>
+</a-box>
+<a-cylinder
+position="-12.5 1.5 0"
+radius="0.1"
+height="3"
+material="src: #metal-base;
+repeat: 1 5;
+ambientOcclusionMap: #metal-ao;
+ambientOcclusionTextureRepeat: 1 5;
+normalMap: #metal-normal;
+normalTextureRepeat: 1 5"
+>
+</a-cylinder>
+<a-box
+position="-12.5 3 0"
+width="0.5"
+height="1"
+depth="1.8"
+color="light brown"
+>
+</a-box>
+
+
+<a-box
+position="11 0.01 0"
+width="6"
+height="0.1"
+depth="6"
+color="light brown"
+>
+</a-box>
+<a-cylinder
+position="12.5 1.5 0"
+radius="0.1"
+height="3"
+material="src: #metal-base;
+repeat: 1 5;
+ambientOcclusionMap: #metal-ao;
+ambientOcclusionTextureRepeat: 1 5;
+normalMap: #metal-normal;
+normalTextureRepeat: 1 5"
+>
+</a-cylinder>
+<a-box
+position="12.5 3 0"
+width="0.5"
+height="1"
+depth="1.8"
+color="light brown"
+>
+</a-box>
+<a-plane
+position="0 -0.01 0" 
+rotation="-90 0 0"
+width="500" 
+height="500" 
+material="src: #ground-base;
+repeat: 50 50; ambientOcclusionMap: #ground-ao;
+ambientOcclusionTextureRepeat: 50 50;
+normalMap: #ground-normal;
+normalTextureRepeat: 50 50"
+>
+</a-plane>
+<a-entity
+gltf-model="#basketball"
+position="0 0.2 0"
+rotation="0 0 0"
+scale="0.5 0.5 0.5"
+>
+</a-entity>
+
+<a-entity
+gltf-model="#bench"
+position="15 0 -5"
+rotation="0 -90 0"
+scale="5 5 5"
+>
+</a-entity>
+
+<a-entity
+gltf-model="#cone"
+position="-12 0 6"
+rotation="0 0 0"
+scale="1 1 1"
+>
+</a-entity>
+
+<a-entity
+gltf-model="#lightpost"
+position="-20 0 0"
+rotation="0 -90 0"
+scale="0.5 0.5 0.5"
+>
+</a-entity>
+
+<a-entity
+gltf-model="#stadiumseats"
+position="0 0 -20"
+rotation="0 180 0"
+scale="1 1 1"
+>
+</a-entity>
+
+
+
+
+
+
 
 
 
